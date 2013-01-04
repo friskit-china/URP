@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<bean class="com.smarty4j.utils.SmartyManager" name="smartyManager" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="message/Application" />
+	<!-- 通过ognl访问静态方法 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<!-- 取消struts2标签所带样式 -->
+	<constant name="struts.ui.theme" value="simple" />
+	
+	<package name="BASE" namespace="/BASE" extends="struts-default">
+        <result-types>
+			<result-type name="book" class="com.smarty4j.utils.SmartyResult"/>
+        </result-types>
+
+		<global-results>
+			<result name="error">/loginPage.jsp</result>
+		</global-results>
+	</package>
+	
+	<package name="/mng" namespace="/mng" extends="BASE">
+		<action name="book" class="com.smarty4j.action.BookAction">
+			<result name="success" type="book">/templates/books.st</result>
+		</action>
+	</package>
+</struts>    

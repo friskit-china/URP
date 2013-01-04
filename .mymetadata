@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="FriskitURP"
+  id="myeclipse.1357282890045"
+  context-root="/FriskitURP"
+  j2ee-spec="6.0"
+  archive="FriskitURP.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
