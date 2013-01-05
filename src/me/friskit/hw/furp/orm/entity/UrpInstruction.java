@@ -8,6 +8,10 @@ public class UrpInstruction implements java.io.Serializable {
 
 	// Fields
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1036444075737284233L;
 	private UrpInstructionId id;
 
 	// Constructors

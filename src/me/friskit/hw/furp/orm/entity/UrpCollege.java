@@ -11,6 +11,10 @@ public class UrpCollege implements java.io.Serializable {
 
 	// Fields
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4710575561478958131L;
 	private String collegeNo;
 	private UrpTeacher president;
 	private String name;

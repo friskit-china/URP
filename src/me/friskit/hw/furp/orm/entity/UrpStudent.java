@@ -12,6 +12,10 @@ public class UrpStudent implements java.io.Serializable {
 
 	// Fields
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4831099715011685158L;
 	private String stuNo;
 	private UrpDormitory dormitory;
 	private String name;

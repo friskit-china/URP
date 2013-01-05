@@ -2,6 +2,7 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 	<bean class="com.smarty4j.utils.SmartyManager" name="smartyManager" />
+<!-- 	<constant name="struts.action.excludePattern" value="/scripts/.*"></constant> -->
 	<constant name="struts.i18n.encoding" value="UTF-8" />
 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
 	<constant name="struts.devMode" value="true" />
@@ -13,17 +14,36 @@
 	
 	<package name="BASE" namespace="/BASE" extends="struts-default">
         <result-types>
-			<result-type name="book" class="com.smarty4j.utils.SmartyResult"/>
+			<result-type name="smarty" class="com.smarty4j.utils.SmartyResult"/>
         </result-types>
 
 		<global-results>
-			<result name="error">/loginPage.jsp</result>
+			<result name="error">tpl/error.tpl</result>
 		</global-results>
 	</package>
 	
-	<package name="/mng" namespace="/mng" extends="BASE">
-		<action name="book" class="com.smarty4j.action.BookAction">
-			<result name="success" type="book">/templates/books.st</result>
+	<package name="/" namespace="/" extends="BASE">
+		<action name="index" class="me.friskit.hw.furp.action.IndexAction">
+			<result name="success" type="smarty">/tpl/home.tpl</result>
+			<result name="login" type="smarty">/tpl/login.tpl</result>
+		</action>
+	</package>
+	<package name="json" namespace="/a" extends="json-default">
+		<!-- 测试JSON用Action -->
+		<action name="test" class="me.friskit.hw.furp.action.JSONTest">
+			 <result type="json">  
+                <!-- 这里指定将被Struts2序列化的属性，该属性在action中必须有对应的getter方法 -->  
+                <param name="root">dataMap</param>  
+            </result>  
+		</action>
+	</package>
+	
+	<package name="getpage" namespace="/GetPages" extends="BASE">
+		<action name="GetIndexPageAction" class="me.friskit.hw.furp.action.getpage.GetIndexPageAction">
+			<result type="smarty">/tpl/pages/index.tpl</result>
+		</action>
+		<action name="GetAttentionNotificationPageAction" class="me.friskit.hw.furp.action.getpage.attention.GetAttentionNotificationPageAction">
+			<result type="smarty">/tpl/pages/Attention/Notification.tpl</result>
 		</action>
 	</package>
 </struts>    

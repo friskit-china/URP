@@ -8,6 +8,10 @@ public class UrpUserdict implements java.io.Serializable {
 
 	// Fields
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1672095844488512359L;
 	private UrpUserdictId id;
 	private String ctext;
 

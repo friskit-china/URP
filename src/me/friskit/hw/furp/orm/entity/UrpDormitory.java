@@ -11,6 +11,10 @@ public class UrpDormitory implements java.io.Serializable {
 
 	// Fields
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8886392622411263023L;
 	private String dormNo;
 	private UrpStudent manager;
 	private String buildNo;

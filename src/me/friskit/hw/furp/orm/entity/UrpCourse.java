@@ -11,6 +11,10 @@ public class UrpCourse implements java.io.Serializable {
 
 	// Fields
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5663606432480538843L;
 	private String courseNo;
 	private String kind;
 	private String name;

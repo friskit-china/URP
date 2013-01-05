@@ -8,6 +8,10 @@ public class UrpStuCourseId implements java.io.Serializable {
 
 	// Fields
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5061188946614284958L;
 	private UrpStudent student;
 	private UrpCourse course;
 

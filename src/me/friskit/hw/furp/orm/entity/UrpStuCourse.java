@@ -10,6 +10,10 @@ public class UrpStuCourse implements java.io.Serializable {
 
 	// Fields
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6929499788820100821L;
 	private UrpStuCourseId id;
 	private Short score;
 	private Date inputtime;

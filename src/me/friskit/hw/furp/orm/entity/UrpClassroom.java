@@ -11,6 +11,10 @@ public class UrpClassroom implements java.io.Serializable {
 
 	// Fields
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7726199079341372931L;
 	private String classroomNo;
 	private String name;
 	private String kind;
