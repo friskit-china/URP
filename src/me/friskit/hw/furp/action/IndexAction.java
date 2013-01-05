@@ -1,5 +1,7 @@
 package me.friskit.hw.furp.action;
 
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 public class IndexAction extends ActionSupport{
@@ -20,7 +22,7 @@ public class IndexAction extends ActionSupport{
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
-		
+		ServletActionContext.getResponse().setCharacterEncoding("UTF-8");
 		//这个需要根据不同的登陆身份传入不同的值
 		treePath = new String("/FriskitURP/data/FullTree.tr");
 		

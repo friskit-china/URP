@@ -49,6 +49,8 @@ public class SmartyManager {
 			templatePath = templatePath + File.separator;
 		}
 		engine.setTemplatePath(templatePath);	//ÉèÖÃÄ£°åÂ·¾¶
+		//System.out.println("encoding:                                "+engine.getEncoding());
+		//engine.setEncoding("GB2312");
 	}
 	
 }

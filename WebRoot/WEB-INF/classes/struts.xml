@@ -2,11 +2,13 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 	<bean class="com.smarty4j.utils.SmartyManager" name="smartyManager" />
-<!-- 	<constant name="struts.action.excludePattern" value="/scripts/.*"></constant> -->
+	
 	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.locale" value="UTF-8"/>
 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
 	<constant name="struts.devMode" value="true" />
 	<constant name="struts.custom.i18n.resources" value="message/Application" />
+	
 	<!-- 通过ognl访问静态方法 -->
 	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
 	<!-- 取消struts2标签所带样式 -->

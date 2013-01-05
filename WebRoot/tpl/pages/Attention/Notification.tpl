@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <html>
 <head>
+    
 	{include file="../../inc/scriptHeader.tpl"}
 </head>
 <body>
