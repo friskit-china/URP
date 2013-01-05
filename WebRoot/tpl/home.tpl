@@ -64,9 +64,78 @@
                 tab.title = node.text;
                 tab.showCloseButton = true;
                 switch(node.id){
+                    //Attention
                     case "Notification":
-                        tab.url = "/FriskitURP/GetPages/GetAttentionNotificationPageAction";
+                        tab.url = "/FriskitURP/GetPages/GetNotificationPageAction";
                         break;
+                    case "SchoolCalendar":
+                        tab.url = "/FriskitURP/GetPages/GetSchoolCalendarPageAction";
+                        break;
+                    case "About":
+                        tab.url = "/FriskitURP/GetPages/GetAboutPageAction";
+                        break;
+
+                    //CollegeAndDepartment
+                    case "CollegeInfoAdmin":
+                        tab.url = "/FriskitURP/GetPages/GetCollegeInfoAdminPageAction";
+                        break;
+                    case "DepartmentInfoAdmin":
+                        tab.url = "/FriskitURP/GetPages/GetDepartmentInfoAdminPageAction";
+                        break;
+
+                    //TeacherAdmin
+                    case "TeacherInfoAdmin":
+                        tab.url = "/FriskitURP/GetPages/GetTeacherInfoAdminPageAction";
+                        break;
+                    case "TeacherCourseAdmin":
+                        tab.url = "/FriskitURP/GetPages/GetTeacherCourseAdminPageAction";
+                        break;
+
+                    //StudentAdmin
+                    case "StudentAdd":
+                        tab.url = "/FriskitURP/GetPages/GetStudentAddPageAction";
+                        break;
+                    case "StudentInfoAdmin":
+                        tab.url = "/FriskitURP/GetPages/GetStudentInfoAdminPageAction";
+                        break;
+
+                    //CourseAdmin
+                    case "CourseInfoAdmin":
+                        tab.url = "/FriskitURP/GetPages/GetCourseInfoAdminPageAction";
+                        break;
+                    case "CourseTeachInfoAdmin":
+                        tab.url = "/FriskitURP/GetPages/GetCourseTeachInfoAdminPageAction";
+                        break;
+                    case "SyllabusQuery":
+                        tab.url = "/FriskitURP/GetPages/GetSyllabusQueryPageAction";
+                        break;
+
+                    //ScoreAdmin
+                    case "RegisterScore":
+                        tab.url = "/FriskitURP/GetPages/GetRegisterScorePageAction";
+                        break;
+                    case "ScoreQuery":
+                        tab.url = "/FriskitURP/GetPages/GetScoreQueryPageAction";
+                        break;
+                    case "ScoreStatistic":
+                        tab.url = "/FriskitURP/GetPages/GetScoreStatisticPageAction";
+                        break;
+                    case "ScoreModify":
+                        tab.url = "/FriskitURP/GetPages/GetScoreModifyPageAction";
+                        break;
+                    case "ClassInfoAdmin":
+                        tab.url = "/FriskitURP/GetPages/GetClassInfoAdminPageAction";
+                        break;
+                    case "StudentClassAdmin":
+                        tab.url = "/FriskitURP/GetPages/GetStudentClassAdminPageAction";
+                        break;
+                    case "DormitoryInfoAdmin":
+                        tab.url = "/FriskitURP/GetPages/GetDormitoryInfoAdminPageAction";
+                        break;
+                    case "ClassroomInfoAdmin":
+                        tab.url = "/FriskitURP/GetPages/GetClassroomInfoAdminPageAction";
+                        break;
+
                 }
                 
                 tabs.addTab(tab);

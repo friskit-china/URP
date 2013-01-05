@@ -18,10 +18,7 @@
         <result-types>
 			<result-type name="smarty" class="com.smarty4j.utils.SmartyResult"/>
         </result-types>
-
-		<global-results>
-			<result name="error">tpl/error.tpl</result>
-		</global-results>
+        
 	</package>
 	
 	<package name="/" namespace="/" extends="BASE">
@@ -41,11 +38,87 @@
 	</package>
 	
 	<package name="getpage" namespace="/GetPages" extends="BASE">
+		<!-- 主页 -->
 		<action name="GetIndexPageAction" class="me.friskit.hw.furp.action.getpage.GetIndexPageAction">
 			<result type="smarty">/tpl/pages/index.tpl</result>
 		</action>
-		<action name="GetAttentionNotificationPageAction" class="me.friskit.hw.furp.action.getpage.attention.GetAttentionNotificationPageAction">
+		
+		<!-- Attention -->
+		<action name="GetNotificationPageAction" class="me.friskit.hw.furp.action.getpage.attention.GetNotificationPageAction">
 			<result type="smarty">/tpl/pages/Attention/Notification.tpl</result>
+		</action>
+		<action name="GetSchoolCalendarPageAction" class="me.friskit.hw.furp.action.getpage.attention.GetSchoolCalendarPageAction">
+			<result type="smarty">/tpl/pages/Attention/SchoolCalendar.tpl</result>
+		</action>
+		<action name="GetAboutPageAction" class="me.friskit.hw.furp.action.getpage.attention.help.GetAboutPageAction">
+			<result type="smarty">/tpl/pages/Attention/Help/About.tpl</result>
+		</action>
+		
+		<!-- CollegeAndDepartmentAdmin -->
+		<action name="GetCollegeInfoAdminPageAction" class="me.friskit.hw.furp.action.getpage.CollegeAndDepartmentAdmin.GetCollegeInfoAdminPageAction">
+			<result type="smarty">/tpl/pages/CollegeAndDepartmentAdmin/CollegeInfoAdmin.tpl</result>
+		</action>
+		<action name="GetDepartmentInfoAdminPageAction" class="me.friskit.hw.furp.action.getpage.CollegeAndDepartmentAdmin.GetDepartmentInfoAdminPageAction">
+			<result type="smarty">/tpl/pages/CollegeAndDepartmentAdmin/DepartmentInfoAdmin.tpl</result>
+		</action>
+		
+		<!-- TeacherAdmin -->
+		<action name="GetTeacherInfoAdminPageAction" class="me.friskit.hw.furp.action.getpage.TeacherAdmin.GetTeacherInfoAdminPageAction">
+			<result type="smarty">/tpl/pages/TeacherAdmin/TeacherInfoAdmin.tpl</result>
+		</action>
+		<action name="GetTeacherCourseAdminPageAction" class="me.friskit.hw.furp.action.getpage.TeacherAdmin.GetTeacherCourseAdminPageAction">
+			<result type="smarty">/tpl/pages/TeacherAdmin/TeacherCourseAdmin.tpl</result>
+		</action>
+		
+		<!-- StudentAdmin -->
+		<action name="GetStudentAddPageAction" class="me.friskit.hw.furp.action.getpage.StudentAdmin.GetStudentAddPageAction">
+			<result type="smarty">/tpl/pages/StudentAdmin/StudentAdd.tpl</result>
+		</action>
+		<action name="GetStudentInfoAdminPageAction" class="me.friskit.hw.furp.action.getpage.StudentAdmin.GetStudentInfoAdminPageAction">
+			<result type="smarty">/tpl/pages/StudentAdmin/StudentInfoAdmin.tpl</result>
+		</action>
+		
+		<!-- CourseAdmin -->
+		<action name="GetCourseInfoAdminPageAction" class="me.friskit.hw.furp.action.getpage.CourseAdmin.GetCourseInfoAdminPageAction">
+			<result type="smarty">/tpl/pages/CourseAdmin/CourseInfoAdmin.tpl</result>
+		</action>
+		<action name="GetCourseTeachInfoAdminPageAction" class="me.friskit.hw.furp.action.getpage.CourseAdmin.GetCourseTeachInfoAdminPageAction">
+			<result type="smarty">/tpl/pages/CourseAdmin/CourseTeachInfoAdmin.tpl</result>
+		</action>
+		<action name="GetSyllabusQueryPageAction" class="me.friskit.hw.furp.action.getpage.CourseAdmin.GetSyllabusQueryPageAction">
+			<result type="smarty">/tpl/pages/CourseAdmin/SyllabusQuery.tpl</result>
+		</action>
+		
+		<!-- ScoreAdmin -->
+		<action name="GetRegisterScorePageAction" class="me.friskit.hw.furp.action.getpage.ScoreAdmin.GetRegisterScorePageAction">
+			<result type="smarty">/tpl/pages/ScoreAdmin/RegisterScore.tpl</result>
+		</action>
+		<action name="GetScoreModifyPageAction" class="me.friskit.hw.furp.action.getpage.ScoreAdmin.GetScoreModifyPageAction">
+			<result type="smarty">/tpl/pages/ScoreAdmin/ScoreModify.tpl</result>
+		</action>
+		<action name="GetScoreQueryPageAction" class="me.friskit.hw.furp.action.getpage.ScoreAdmin.GetScoreQueryPageAction">
+			<result type="smarty">/tpl/pages/ScoreAdmin/ScoreQuery.tpl</result>
+		</action>
+		<action name="GetScoreStatisticPageAction" class="me.friskit.hw.furp.action.getpage.ScoreAdmin.ScoreAnalyze.GetScoreStatisticPageAction">
+			<result type="smarty">/tpl/pages/ScoreAdmin/ScoreAnalyze/ScoreStatistic.tpl</result>
+		</action>
+		
+		<!-- ClassAdmin -->
+		<action name="GetClassInfoAdminPageAction" class="me.friskit.hw.furp.action.getpage.ClassAdmin.GetClassInfoAdminPageAction">
+			<result type="smarty">/tpl/pages/ClassAdmin/ClassInfoAdmin.tpl</result>
+		</action>
+		<action name="GetStudentClassAdminPageAction" class="me.friskit.hw.furp.action.getpage.ClassAdmin.GetStudentClassAdminPageAction">
+			<result type="smarty">/tpl/pages/ClassAdmin/StudentClassAdmin.tpl</result>
+		</action>
+		
+		<!-- DormitoryAdmin -->
+		<action name="GetDormitoryInfoAdminPageAction" class="me.friskit.hw.furp.action.getpage.DormitoryAdmin.GetDormitoryInfoAdminPageAction">
+			<result type="smarty">/tpl/pages/DormitoryAdmin/DormitoryInfoAdmin.tpl</result>
+		</action>
+		
+		<!-- ClassroomAdmin -->
+		<action name="GetClassroomInfoAdminPageAction" class="me.friskit.hw.furp.action.getpage.ClassroomAdmin.GetClassroomInfoAdminPageAction">
+			<result type="smarty">/tpl/pages/ClassroomAdmin/ClassroomInfoAdmin.tpl</result>
 		</action>
 	</package>
 </struts>    

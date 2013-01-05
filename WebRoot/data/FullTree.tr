@@ -6,27 +6,27 @@
 			{id: "About", text: "关于本软件", pid: "Help"},
 		
 	{id: "CollegeAndDepartmentAdmin", text: "院系管理"},
-		{id: "CollegeInfoModify", text: "学院信息管理", pid: "CollegeAndDepartmentAdmin"},
-		{id: "DepartmentInfoModify", text: "系信息管理", pid: "CollegeAndDepartmentAdmin"},
+		{id: "CollegeInfoAdmin", text: "学院信息管理", pid: "CollegeAndDepartmentAdmin"},
+		{id: "DepartmentInfoAdmin", text: "系信息管理", pid: "CollegeAndDepartmentAdmin"},
 	
 	{id: "TeacherAdmin", text: "教师管理"},
-		{id: "TeacherInfoModify", text: "教师个人信息管理", pid: "TeacherAdmin"},
+		{id: "TeacherInfoAdmin", text: "教师个人信息管理", pid: "TeacherAdmin"},
 		{id: "TeacherCourseAdmin", text: "教师授课信息管理", pid: "TeacherAdmin"},
 	
 	{id: "StudentAdmin", text: "学生管理"},
 		{id: "StudentAdd", text: "学生信息快速录入", pid: "StudentAdmin"},
-		{id: "StudentInfoModify", text: "学生个人信息管理", pid: "StudentAdmin"},
+		{id: "StudentInfoAdmin", text: "学生个人信息管理", pid: "StudentAdmin"},
 		
 	{id: "CourseAdmin", text: "课程管理"},
-		{id: "CourseInfoAdmin", text: "学生信息管理", pid: "CourseAdmin"},
+		{id: "CourseInfoAdmin", text: "课程信息管理", pid: "CourseAdmin"},
 		{id: "CourseTeachInfoAdmin", text: "授课信息维护", pid: "CourseAdmin"},
 		{id: "SyllabusQuery", text: "课程表查询", pid: "CourseAdmin"},
 		
 	{id: "ScoreAdmin", text: "成绩管理"},
 		{id: "RegisterScore", text: "成绩快速录入", pid: "ScoreAdmin"},
 		{id: "ScoreQuery", text: "成绩查询", pid: "ScoreAdmin"},
-		{id: "ScoreStatistics", text: "成绩分析", pid: "ScoreAdmin"},
-			{id: "ScoreStatistic", text: "成绩分段显示", pid: "ScoreStatistics"},
+		{id: "ScoreAnalyze", text: "成绩分析", pid: "ScoreAdmin"},
+			{id: "ScoreStatistic", text: "成绩分段显示", pid: "ScoreAnalyze"},
 		{id: "ScoreModify", text: "成绩修改", pid: "ScoreAdmin"},
 		
 	{id: "ClassAdmin", text: "班级管理"},
@@ -34,7 +34,7 @@
 		{id: "StudentClassAdmin", text: "学生所在班级管理", pid: "ClassAdmin"},
 		
 	{id: "DormitoryAdmin", text: "宿舍管理"},
-		{id: "DormitoryInfo", text:"宿舍信息管理", pid: "DormitoryAdmin"},
+		{id: "DormitoryInfoAdmin", text:"宿舍信息管理", pid: "DormitoryAdmin"},
 	
 	{id: "ClassroomAdmin", text: "教室管理"},
 		{id: "ClassroomInfoAdmin", text:"教室信息管理", pid: "ClassroomAdmin"},

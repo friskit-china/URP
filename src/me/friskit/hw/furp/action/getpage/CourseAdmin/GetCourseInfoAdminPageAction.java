@@ -1,15 +1,18 @@
-package me.friskit.hw.furp.action.getpage.attention;
+package me.friskit.hw.furp.action.getpage.CourseAdmin;
+
+import javax.servlet.ServletContext;
 
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class GetAttentionNotificationPageAction extends ActionSupport {
+public class GetCourseInfoAdminPageAction extends ActionSupport {
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1787945504999939712L;
-	
+	private static final long serialVersionUID = -2742248189328825537L;
+
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
@@ -17,6 +20,5 @@ public class GetAttentionNotificationPageAction extends ActionSupport {
 		return SUCCESS;
 	}
 
-
-
+	
 }
