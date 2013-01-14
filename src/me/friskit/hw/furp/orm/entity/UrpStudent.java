@@ -1,8 +1,6 @@
 package me.friskit.hw.furp.orm.entity;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * UrpStudent entity. @author MyEclipse Persistence Tools
@@ -29,10 +27,6 @@ public class UrpStudent implements java.io.Serializable {
 	private String homePhone;
 	private String address;
 	private Date inputtime;
-	private Set urpClasses = new HashSet(0);
-	private Set urpStuClasses = new HashSet(0);
-	private Set urpDormitories = new HashSet(0);
-	private Set urpStuCourses = new HashSet(0);
 
 	// Constructors
 
@@ -54,8 +48,7 @@ public class UrpStudent implements java.io.Serializable {
 	public UrpStudent(String stuNo, UrpDormitory dormitory, String name,
 			String password, String nation, String sex, Date birthday,
 			String polity, String source, Short score, String homePhone,
-			String address, Date inputtime, Set urpClasses, Set urpStuClasses,
-			Set urpDormitories, Set urpStuCourses) {
+			String address, Date inputtime) {
 		this.stuNo = stuNo;
 		this.dormitory = dormitory;
 		this.name = name;
@@ -69,10 +62,6 @@ public class UrpStudent implements java.io.Serializable {
 		this.homePhone = homePhone;
 		this.address = address;
 		this.inputtime = inputtime;
-		this.urpClasses = urpClasses;
-		this.urpStuClasses = urpStuClasses;
-		this.urpDormitories = urpDormitories;
-		this.urpStuCourses = urpStuCourses;
 	}
 
 	// Property accessors
@@ -180,37 +169,4 @@ public class UrpStudent implements java.io.Serializable {
 	public void setInputtime(Date inputtime) {
 		this.inputtime = inputtime;
 	}
-
-	public Set getUrpClasses() {
-		return this.urpClasses;
-	}
-
-	public void setUrpClasses(Set urpClasses) {
-		this.urpClasses = urpClasses;
-	}
-
-	public Set getUrpStuClasses() {
-		return this.urpStuClasses;
-	}
-
-	public void setUrpStuClasses(Set urpStuClasses) {
-		this.urpStuClasses = urpStuClasses;
-	}
-
-	public Set getUrpDormitories() {
-		return this.urpDormitories;
-	}
-
-	public void setUrpDormitories(Set urpDormitories) {
-		this.urpDormitories = urpDormitories;
-	}
-
-	public Set getUrpStuCourses() {
-		return this.urpStuCourses;
-	}
-
-	public void setUrpStuCourses(Set urpStuCourses) {
-		this.urpStuCourses = urpStuCourses;
-	}
-
 }

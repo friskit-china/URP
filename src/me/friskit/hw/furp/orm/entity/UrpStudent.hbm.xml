@@ -10,7 +10,7 @@
             <column name="STU_NO" length="8" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="dormitory" class="me.friskit.hw.furp.orm.entity.UrpDormitory" fetch="select">
+        <many-to-one name="dormitory" class="me.friskit.hw.furp.orm.entity.UrpDormitory" fetch="select" lazy="false">
             <column name="DORM_NO" length="4" />
         </many-to-one>
         <property name="name" type="java.lang.String">
@@ -46,29 +46,5 @@
         <property name="inputtime" type="java.util.Date">
             <column name="INPUTTIME" length="7" not-null="true" />
         </property>
-        <set name="urpClasses" inverse="true">
-            <key>
-                <column name="MONITOR" length="8" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpClass" />
-        </set>
-        <set name="urpStuClasses" inverse="true">
-            <key>
-                <column name="STU_NO" length="8" not-null="true" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpStuClass" />
-        </set>
-        <set name="urpDormitories" inverse="true">
-            <key>
-                <column name="MANAGER" length="8" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpDormitory" />
-        </set>
-        <set name="urpStuCourses" inverse="true">
-            <key>
-                <column name="STU_NO" length="8" not-null="true" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpStuCourse" />
-        </set>
     </class>
 </hibernate-mapping>

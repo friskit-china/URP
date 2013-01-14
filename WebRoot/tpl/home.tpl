@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title> Hello MiniUI!</title>
+    <title> FriskitURP 校园信息管理系统 </title>
 
     {include file="inc/scriptHeader.tpl"}
 
@@ -98,13 +98,13 @@
                     case "StudentInfoAdmin":
                         tab.url = "/FriskitURP/GetPages/GetStudentInfoAdminPageAction";
                         break;
+                    case "StudentCourseAdmin":
+                        tab.url = "/FriskitURP/GetPages/GetStudentCourseAdminPageAction";
+                        break;
 
                     //CourseAdmin
                     case "CourseInfoAdmin":
                         tab.url = "/FriskitURP/GetPages/GetCourseInfoAdminPageAction";
-                        break;
-                    case "CourseTeachInfoAdmin":
-                        tab.url = "/FriskitURP/GetPages/GetCourseTeachInfoAdminPageAction";
                         break;
                     case "SyllabusQuery":
                         tab.url = "/FriskitURP/GetPages/GetSyllabusQueryPageAction";
@@ -135,9 +135,7 @@
                     case "ClassroomInfoAdmin":
                         tab.url = "/FriskitURP/GetPages/GetClassroomInfoAdminPageAction";
                         break;
-
                 }
-                
                 tabs.addTab(tab);
             }
             tabs.activeTab(tab);

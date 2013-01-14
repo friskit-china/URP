@@ -1,8 +1,5 @@
 package me.friskit.hw.furp.orm.entity;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * UrpClassroom entity. @author MyEclipse Persistence Tools
  */
@@ -20,7 +17,6 @@ public class UrpClassroom implements java.io.Serializable {
 	private String kind;
 	private Short capacity;
 	private String comments;
-	private Set urpInstructions = new HashSet(0);
 
 	// Constructors
 
@@ -37,13 +33,12 @@ public class UrpClassroom implements java.io.Serializable {
 
 	/** full constructor */
 	public UrpClassroom(String classroomNo, String name, String kind,
-			Short capacity, String comments, Set urpInstructions) {
+			Short capacity, String comments) {
 		this.classroomNo = classroomNo;
 		this.name = name;
 		this.kind = kind;
 		this.capacity = capacity;
 		this.comments = comments;
-		this.urpInstructions = urpInstructions;
 	}
 
 	// Property accessors
@@ -87,13 +82,4 @@ public class UrpClassroom implements java.io.Serializable {
 	public void setComments(String comments) {
 		this.comments = comments;
 	}
-
-	public Set getUrpInstructions() {
-		return this.urpInstructions;
-	}
-
-	public void setUrpInstructions(Set urpInstructions) {
-		this.urpInstructions = urpInstructions;
-	}
-
 }

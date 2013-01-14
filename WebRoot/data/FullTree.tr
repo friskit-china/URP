@@ -16,10 +16,10 @@
 	{id: "StudentAdmin", text: "学生管理"},
 		{id: "StudentAdd", text: "学生信息快速录入", pid: "StudentAdmin"},
 		{id: "StudentInfoAdmin", text: "学生个人信息管理", pid: "StudentAdmin"},
+		{id: "StudentCourseAdmin", text: "学生选课管理", pid: "StudentAdmin"},
 		
 	{id: "CourseAdmin", text: "课程管理"},
 		{id: "CourseInfoAdmin", text: "课程信息管理", pid: "CourseAdmin"},
-		{id: "CourseTeachInfoAdmin", text: "授课信息维护", pid: "CourseAdmin"},
 		{id: "SyllabusQuery", text: "课程表查询", pid: "CourseAdmin"},
 		
 	{id: "ScoreAdmin", text: "成绩管理"},

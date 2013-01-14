@@ -41,7 +41,7 @@ public class UrpStuCourseId implements java.io.Serializable {
 		return this.course;
 	}
 
-	public void setCourse(UrpCourse urpCourse) {
+	public void setCourse(UrpCourse course) {
 		this.course = course;
 	}
 

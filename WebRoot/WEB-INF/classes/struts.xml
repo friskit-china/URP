@@ -27,13 +27,214 @@
 			<result name="login" type="smarty">/tpl/login.tpl</result>
 		</action>
 	</package>
-	<package name="json" namespace="/a" extends="json-default">
-		<!-- 测试JSON用Action -->
-		<action name="test" class="me.friskit.hw.furp.action.JSONTest">
-			 <result type="json">  
-                <!-- 这里指定将被Struts2序列化的属性，该属性在action中必须有对应的getter方法 -->  
-                <param name="root">dataMap</param>  
-            </result>  
+	<package name="json" namespace="/a" extends="json-default">	
+		<!-- CollegeAndDepartment -->
+		<action name="GetCollegeInfo" class="me.friskit.hw.furp.action.ajax.CollegeAndDepartmentAdmin.GetCollegeInfoAction">
+			<result type="json">
+				<param name="includeProperties">
+					total,
+					data\[\d+\]\.collegeNo,
+					data\[\d+\]\.president\.teacherNo,
+					data\[\d+\]\.president\.teacherName,
+					data\[\d+\]\.name,
+					data\[\d+\]\.phone,
+					data\[\d+\]\.introduction
+				</param>
+			</result>
+		</action>
+		<action name="GetCollegeDetail" class="me.friskit.hw.furp.action.ajax.CollegeAndDepartmentAdmin.GetCollegeDetailAction">
+			<result type="json"></result>
+		</action>
+		<action name="SaveCollegeDetailModify" class="me.friskit.hw.furp.action.ajax.CollegeAndDepartmentAdmin.SaveCollegeDetailModifyAction">
+			<result type="json"></result>
+		</action>
+		<action name="GetDepartmentInfo" class="me.friskit.hw.furp.action.ajax.CollegeAndDepartmentAdmin.GetDepartmentInfoAction">
+			<result type="json">
+				<param name="includeProperties">
+					total,
+					data\[\d+\]\.departNo,
+					data\[\d+\]\.departmentHeader\.teacherNo,
+					data\[\d+\]\.departmentHeader\.teacherName,
+					data\[\d+\]\.college\.collegeNo,
+					data\[\d+\]\.college\.name,
+					data\[\d+\]\.name,
+					data\[\d+\]\.phone,
+					data\[\d+\]\.introduction
+				</param>
+			</result>
+		</action>
+		<action name="GetDepartmentDetail" class="me.friskit.hw.furp.action.ajax.CollegeAndDepartmentAdmin.GetDepartmentDetailAction">
+			<result type="json"></result>
+		</action>
+		<action name="GetCollegeList" class="me.friskit.hw.furp.action.ajax.CollegeAndDepartmentAdmin.GetCollegeListAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="SaveDepartmentDetailModify" class="me.friskit.hw.furp.action.ajax.CollegeAndDepartmentAdmin.SaveDepartmentDetailModifyAction">
+			<result type="json"></result>
+		</action>
+		<action name="GetDepartmentList" class="me.friskit.hw.furp.action.ajax.CollegeAndDepartmentAdmin.GetDepartmentListAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		
+		<!-- ClassAdmin -->
+		<action name="GetClassInfo" class="me.friskit.hw.furp.action.ajax.ClassAdmin.GetClassInfoAction">
+			<result type="json">
+				<param name="includeProperties">
+					total,
+					data\[\d+\]\.classNo,
+					data\[\d+\]\.name,
+					data\[\d+\]\.kind,
+					data\[\d+\]\.monitor\.name,
+					data\[\d+\]\.manager\.teacherName
+				</param>
+			</result>
+		</action>
+		<action name="GetStudentClassInfo" class="me.friskit.hw.furp.action.ajax.ClassAdmin.GetStudentClassInfoAction">
+			<result type="json">
+				<param name="includeProperties">
+					total,
+					data\[\d+\]\.id\.student\.stuNo,
+					data\[\d+\]\.id\.student\.name,
+					data\[\d+\]\.id\.uclass\.classNo,
+					data\[\d+\]\.id\.uclass\.name,
+					data\[\d+\]\.id\.uclass\.kind
+				</param>
+			</result>
+		</action>
+		<!-- ClassroomAdmin -->
+		<action name="GetClassroomInfo" class="me.friskit.hw.furp.action.ajax.Classroom.GetClassroomInfoAction">
+			<result type="json">
+				<param name="includeProperties">
+					total,
+					data\[\d+\]\.classroomNo,
+					data\[\d+\]\.kind,
+					data\[\d+\]\.name,
+					data\[\d+\]\.capacity,
+					data\[\d+\]\.comments
+				</param>
+			</result>
+		</action>
+		<!-- CourseAdmin -->
+		<action name="GetCourseInfo" class="me.friskit.hw.furp.action.ajax.CourseAdmin.GetCourseInfoAction">
+			<result type="json">
+				<param name="includeProperties">
+					total,
+					data\[\d+\]\.courseNo,
+					data\[\d+\]\.kind,
+					data\[\d+\]\.name,
+					data\[\d+\]\.credit,
+					data\[\d+\]\.introduction
+				</param>
+			</result>
+		</action>
+		<!-- DormitoryAdmin -->
+		<action name="GetDormitoryInfo" class="me.friskit.hw.furp.action.ajax.DormotoryAdmin.GetDormitoryInfoAction">
+			<result type="json">
+				<param name="includeProperties">
+					total,
+					data\[\d+\]\.dormNo,
+					data\[\d+\]\.buildNo,
+					data\[\d+\]\.apartmentNo,
+					data\[\d+\]\.sex,
+					data\[\d+\]\.stuNum,
+					data\[\d+\]\.phone,
+					data\[\d+\]\.manager\.name
+				</param>
+			</result>
+		</action>
+		<!-- ScoreAdmin -->
+		<action name="GetScoreInfo" class="me.friskit.hw.furp.action.ajax.ScoreAdmin.GetScoreInfoAction">
+			<result type="json">
+				<param name="includeProperties">
+					total,
+					data\[\d+\]\.id\.student\.stuNo,
+					data\[\d+\]\.id\.student\.name,
+					data\[\d+\]\.id\.course\.courseNo,
+					data\[\d+\]\.id\.course\.kind,
+					data\[\d+\]\.id\.course\.name,
+					data\[\d+\]\.id\.course\.credit,
+					data\[\d+\]\.score,
+				</param>
+			</result>
+		</action>
+		<!-- StudentAdmin -->
+		<action name="GetStudentInfo" class="me.friskit.hw.furp.action.ajax.StudentAdmin.GetStudentInfoAction">
+			<result type="json">
+				<param name="includeProperties">
+					total,
+					data\[\d+\]\.stuNo,
+					data\[\d+\]\.name,
+					data\[\d+\]\.nation,
+					data\[\d+\]\.sex,
+					data\[\d+\]\.polity,
+					data\[\d+\]\.source,
+					data\[\d+\]\.score,
+					data\[\d+\]\.homePhone,
+					data\[\d+\]\.address
+					data\[\d+\]\.dormitory\.dormNo,
+					data\[\d+\]\.dormitory\.buildNo,
+					data\[\d+\]\.dormitory\.apartmentNo,
+					data\[\d+\]\.inputtime
+				</param>
+			</result>
+		</action>
+		<action name="GetStudentCourseInfo" class="me.friskit.hw.furp.action.ajax.StudentAdmin.GetStudentCourseInfoAction">
+			<result type="json">
+				<param name="includeProperties">
+					total,
+					data\[\d+\]\.id\.student\.stuNo,
+					data\[\d+\]\.id\.student\.name,
+					data\[\d+\]\.id\.course\.courseNo,
+					data\[\d+\]\.id\.course\.name,
+					data\[\d+\]\.id\.course\.kind,
+					data\[\d+\]\.id\.course\.credit
+				</param>
+			</result>
+		</action>
+		<!-- TeacherAdmin -->
+		<action name="GetTeacherInfo" class="me.friskit.hw.furp.action.ajax.TeacherAdmin.GetTeacherInfoAction">
+			<result type="json">
+				<param name="includeProperties">
+					total,
+					data\[\d+\]\.teacherNo,
+					data\[\d+\]\.teacherName,
+					data\[\d+\]\.sex,
+					data\[\d+\]\.phone,
+					data\[\d+\]\.post,
+					data\[\d+\]\.college\.collegeNo,
+					data\[\d+\]\.college\.name,
+					data\[\d+\]\.department\.departNo,
+					data\[\d+\]\.department\.name
+				</param>
+			</result>
+		</action>
+		<action name="GetTeachCourseInfo" class="me.friskit.hw.furp.action.ajax.TeacherAdmin.GetTeachCourseInfoAction">
+			<result type="json">
+				<param name="includeProperties">
+					total,
+					data\[\d+\]\.id\.teacher\.teacherNo,
+					data\[\d+\]\.id\.teacher\.teacherName,
+					data\[\d+\]\.id\.course\.courseNo,
+					data\[\d+\]\.id\.course\.name,
+					data\[\d+\]\.id\.course\.kind,
+					data\[\d+\]\.comments
+				</param>
+			</result>
+		</action>
+		<action name="GetTeacherList" class="me.friskit.hw.furp.action.ajax.TeacherAdmin.GetTeacherListAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="GetTeacherDetail" class="me.friskit.hw.furp.action.ajax.TeacherAdmin.GetTeacherDetailAction">
+			<result type="json"></result>
+		</action>
+		<action name="SaveTeacherDetailModify" class="me.friskit.hw.furp.action.ajax.TeacherAdmin.SaveTeacherDetailModifyAction">
+			<result type="json"></result>
 		</action>
 	</package>
 	
@@ -77,13 +278,13 @@
 		<action name="GetStudentInfoAdminPageAction" class="me.friskit.hw.furp.action.getpage.StudentAdmin.GetStudentInfoAdminPageAction">
 			<result type="smarty">/tpl/pages/StudentAdmin/StudentInfoAdmin.tpl</result>
 		</action>
+		<action name="GetStudentCourseAdminPageAction" class="me.friskit.hw.furp.action.getpage.StudentAdmin.GetStudentCourseAdminPageAction">
+			<result type="smarty">/tpl/pages/StudentAdmin/StudentCourseAdmin.tpl</result>
+		</action>
 		
 		<!-- CourseAdmin -->
 		<action name="GetCourseInfoAdminPageAction" class="me.friskit.hw.furp.action.getpage.CourseAdmin.GetCourseInfoAdminPageAction">
 			<result type="smarty">/tpl/pages/CourseAdmin/CourseInfoAdmin.tpl</result>
-		</action>
-		<action name="GetCourseTeachInfoAdminPageAction" class="me.friskit.hw.furp.action.getpage.CourseAdmin.GetCourseTeachInfoAdminPageAction">
-			<result type="smarty">/tpl/pages/CourseAdmin/CourseTeachInfoAdmin.tpl</result>
 		</action>
 		<action name="GetSyllabusQueryPageAction" class="me.friskit.hw.furp.action.getpage.CourseAdmin.GetSyllabusQueryPageAction">
 			<result type="smarty">/tpl/pages/CourseAdmin/SyllabusQuery.tpl</result>

@@ -6,7 +6,6 @@
 	</head>
 
 	<body>
-		关于页面<br>
-		未完成
+		FriskitURP系统 0.00001版
 	</body>
 </html>

@@ -10,10 +10,10 @@
             <column name="DEPART_NO" length="3" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="departmentHeader" class="me.friskit.hw.furp.orm.entity.UrpTeacher" fetch="select">
+        <many-to-one name="departmentHeader" class="me.friskit.hw.furp.orm.entity.UrpTeacher" fetch="select" lazy="false">
             <column name="DEPART_HEADER" length="5" />
         </many-to-one>
-        <many-to-one name="college" class="me.friskit.hw.furp.orm.entity.UrpCollege" fetch="select">
+        <many-to-one name="college" class="me.friskit.hw.furp.orm.entity.UrpCollege" fetch="select" lazy="false">
             <column name="COLLEGE_NO" length="2" not-null="true" />
         </many-to-one>
         <property name="name" type="java.lang.String">
@@ -25,11 +25,5 @@
         <property name="introduction" type="java.lang.String">
             <column name="INTRODUCTION" length="4000" />
         </property>
-        <set name="urpTeachers" inverse="true">
-            <key>
-                <column name="DEPART_NO" length="3" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpTeacher" />
-        </set>
     </class>
 </hibernate-mapping>

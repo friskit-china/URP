@@ -22,11 +22,5 @@
         <property name="comments" type="java.lang.String">
             <column name="COMMENTS" length="200" />
         </property>
-        <set name="urpInstructions" inverse="true">
-            <key>
-                <column name="CLASSROOM_NO" length="6" not-null="true" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpInstruction" />
-        </set>
     </class>
 </hibernate-mapping>

@@ -7,16 +7,16 @@
 <hibernate-mapping>
     <class name="me.friskit.hw.furp.orm.entity.UrpInstruction" table="URP_INSTRUCTION" schema="FRISKIT">
         <composite-id name="id" class="me.friskit.hw.furp.orm.entity.UrpInstructionId">
-            <key-many-to-one name="teacher" class="me.friskit.hw.furp.orm.entity.UrpTeacher">
+            <key-many-to-one name="teacher" class="me.friskit.hw.furp.orm.entity.UrpTeacher" lazy="false">
                 <column name="TEACHER_NO" length="5" />
             </key-many-to-one>
-            <key-many-to-one name="course" class="me.friskit.hw.furp.orm.entity.UrpCourse">
+            <key-many-to-one name="course" class="me.friskit.hw.furp.orm.entity.UrpCourse" lazy="false">
                 <column name="COURSE_NO" length="8" />
             </key-many-to-one>
-            <key-many-to-one name="classroom" class="me.friskit.hw.furp.orm.entity.UrpClassroom">
+            <key-many-to-one name="classroom" class="me.friskit.hw.furp.orm.entity.UrpClassroom" lazy="false">
                 <column name="CLASSROOM_NO" length="6" />
             </key-many-to-one>
-            <key-many-to-one name="uclass" class="me.friskit.hw.furp.orm.entity.UrpClass">
+            <key-many-to-one name="uclass" class="me.friskit.hw.furp.orm.entity.UrpClass" lazy="false">
                 <column name="CLASS_NO" length="8" />
             </key-many-to-one>
             <key-property name="instructTime" type="java.lang.String">

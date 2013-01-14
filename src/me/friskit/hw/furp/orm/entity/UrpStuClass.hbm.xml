@@ -7,10 +7,10 @@
 <hibernate-mapping>
     <class name="me.friskit.hw.furp.orm.entity.UrpStuClass" table="URP_STU_CLASS" schema="FRISKIT">
         <composite-id name="id" class="me.friskit.hw.furp.orm.entity.UrpStuClassId">
-            <key-many-to-one name="student" class="me.friskit.hw.furp.orm.entity.UrpStudent">
+            <key-many-to-one name="student" class="me.friskit.hw.furp.orm.entity.UrpStudent" lazy="false">
                 <column name="STU_NO" length="8" />
             </key-many-to-one>
-            <key-many-to-one name="uclass" class="me.friskit.hw.furp.orm.entity.UrpClass">
+            <key-many-to-one name="uclass" class="me.friskit.hw.furp.orm.entity.UrpClass" lazy="false">
                 <column name="CLASS_NO" length="8" />
             </key-many-to-one>
         </composite-id>

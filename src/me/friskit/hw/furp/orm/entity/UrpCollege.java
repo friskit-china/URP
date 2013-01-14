@@ -1,8 +1,5 @@
 package me.friskit.hw.furp.orm.entity;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * UrpCollege entity. @author MyEclipse Persistence Tools
  */
@@ -20,8 +17,6 @@ public class UrpCollege implements java.io.Serializable {
 	private String name;
 	private String phone;
 	private String introduction;
-	private Set urpDepartments = new HashSet(0);
-	private Set urpTeachers = new HashSet(0);
 
 	// Constructors
 
@@ -37,15 +32,12 @@ public class UrpCollege implements java.io.Serializable {
 
 	/** full constructor */
 	public UrpCollege(String collegeNo, UrpTeacher president, String name,
-			String phone, String introduction, Set urpDepartments,
-			Set urpTeachers) {
+			String phone, String introduction) {
 		this.collegeNo = collegeNo;
 		this.president = president;
 		this.name = name;
 		this.phone = phone;
 		this.introduction = introduction;
-		this.urpDepartments = urpDepartments;
-		this.urpTeachers = urpTeachers;
 	}
 
 	// Property accessors
@@ -89,21 +81,4 @@ public class UrpCollege implements java.io.Serializable {
 	public void setIntroduction(String introduction) {
 		this.introduction = introduction;
 	}
-
-	public Set getUrpDepartments() {
-		return this.urpDepartments;
-	}
-
-	public void setUrpDepartments(Set urpDepartments) {
-		this.urpDepartments = urpDepartments;
-	}
-
-	public Set getUrpTeachers() {
-		return this.urpTeachers;
-	}
-
-	public void setUrpTeachers(Set urpTeachers) {
-		this.urpTeachers = urpTeachers;
-	}
-
 }

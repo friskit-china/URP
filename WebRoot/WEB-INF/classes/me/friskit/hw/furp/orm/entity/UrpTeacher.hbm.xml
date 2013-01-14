@@ -10,13 +10,13 @@
             <column name="TEACHER_NO" length="5" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="college" class="me.friskit.hw.furp.orm.entity.UrpCollege" fetch="select">
+        <many-to-one name="college" class="me.friskit.hw.furp.orm.entity.UrpCollege" fetch="select" lazy="false">
             <column name="COLLEGE_NO" length="2" />
         </many-to-one>
-        <many-to-one name="department" class="me.friskit.hw.furp.orm.entity.UrpDepartment" fetch="select">
+        <many-to-one name="department" class="me.friskit.hw.furp.orm.entity.UrpDepartment" fetch="select" lazy="false">
             <column name="DEPART_NO" length="3" />
         </many-to-one>
-        <property name="name" type="java.lang.String">
+        <property name="teacherName" type="java.lang.String">
             <column name="NAME" length="20" not-null="true" />
         </property>
         <property name="password" type="java.lang.String">
@@ -31,35 +31,5 @@
         <property name="post" type="java.lang.String">
             <column name="POST" length="3" />
         </property>
-        <set name="urpTeachCourses" inverse="true">
-            <key>
-                <column name="TEACHER_NO" length="5" not-null="true" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpTeachCourse" />
-        </set>
-        <set name="urpDepartments" inverse="true">
-            <key>
-                <column name="DEPART_HEADER" length="5" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpDepartment" />
-        </set>
-        <set name="urpColleges" inverse="true">
-            <key>
-                <column name="PRESIDENT" length="5" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpCollege" />
-        </set>
-        <set name="urpClasses" inverse="true">
-            <key>
-                <column name="MANAGER" length="5" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpClass" />
-        </set>
-        <set name="urpInstructions" inverse="true">
-            <key>
-                <column name="TEACHER_NO" length="5" not-null="true" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpInstruction" />
-        </set>
     </class>
 </hibernate-mapping>

@@ -10,7 +10,7 @@
             <column name="DORM_NO" length="4" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="manager" class="me.friskit.hw.furp.orm.entity.UrpStudent" fetch="select">
+        <many-to-one name="manager" class="me.friskit.hw.furp.orm.entity.UrpStudent" fetch="select" lazy="false">
             <column name="MANAGER" length="8" />
         </many-to-one>
         <property name="buildNo" type="java.lang.String">
@@ -28,11 +28,5 @@
         <property name="phone" type="java.lang.String">
             <column name="PHONE" length="7" />
         </property>
-        <set name="urpStudents" inverse="true">
-            <key>
-                <column name="DORM_NO" length="4" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpStudent" />
-        </set>
     </class>
 </hibernate-mapping>

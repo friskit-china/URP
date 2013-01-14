@@ -22,35 +22,5 @@
         <property name="introduction" type="java.lang.String">
             <column name="INTRODUCTION" length="4000" />
         </property>
-        <set name="urpStuCourses" inverse="true">
-            <key>
-                <column name="COURSE_NO" length="8" not-null="true" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpStuCourse" />
-        </set>
-        <set name="urpTeachCourses" inverse="true">
-            <key>
-                <column name="COURSE_NO" length="8" not-null="true" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpTeachCourse" />
-        </set>
-        <set name="urpCoursePrevsForCoursePrevNo" inverse="true">
-            <key>
-                <column name="COURSE_PREV_NO" length="8" not-null="true" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpCoursePrev" />
-        </set>
-        <set name="urpInstructions" inverse="true">
-            <key>
-                <column name="COURSE_NO" length="8" not-null="true" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpInstruction" />
-        </set>
-        <set name="urpCoursePrevsForCourseNo" inverse="true">
-            <key>
-                <column name="COURSE_NO" length="8" not-null="true" />
-            </key>
-            <one-to-many class="me.friskit.hw.furp.orm.entity.UrpCoursePrev" />
-        </set>
     </class>
 </hibernate-mapping>
